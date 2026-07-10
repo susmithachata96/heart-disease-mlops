@@ -8,3 +8,5 @@ mlruns/
 .DS_Store
 *.log
 .vscode/settings.json
+mlflow.db
+notebooks/mlflow.db
