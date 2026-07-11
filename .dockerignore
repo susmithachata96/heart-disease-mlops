@@ -1,12 +1,46 @@
+# Git
+.git
+.github
+
+# Python
 venv/
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+
+# Jupyter
 .ipynb_checkpoints/
-.git/
-.github/
-*.tar
+
+# Logs
+logs/
 *.log
-notebooks/
-mlruns/
-.idea/
+
+# Docker
+*.tar
+
+# Kubernetes
+*.yaml~
+
+# VS Code
 .vscode/
+
+# PyCharm
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Model artifacts (if generated locally)
+mlruns/
+artifacts/
+
+# Temporary files
+*.tmp
+*.bak

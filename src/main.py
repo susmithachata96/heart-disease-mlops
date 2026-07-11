@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
-
+from src.middleware.logging_middleware import LoggingMiddleware
 from src.api.routes.predict import router as predict_router
 
 app = FastAPI(
@@ -26,7 +26,7 @@ Features:
         "name": "MIT License",
     },
 )
-
+app.add_middleware(LoggingMiddleware)
 app.include_router(predict_router, tags=["Prediction"])
 
 
