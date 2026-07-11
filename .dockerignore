@@ -1,0 +1,12 @@
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.git/
+.github/
+*.tar
+*.log
+notebooks/
+mlruns/
+.idea/
+.vscode/
