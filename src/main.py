@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from fastapi.responses import JSONResponse
 from src.middleware.logging_middleware import LoggingMiddleware
 from src.api.routes.predict import router as predict_router
+from prometheus_fastapi_instrumentator import Instrumentator
 
 app = FastAPI(
     title="Heart Disease Prediction API",
@@ -16,6 +17,8 @@ Features:
 - Docker Support
 - Kubernetes Deployment
 - CI/CD using GitHub Actions
+- Prometheus Monitoring
+- Grafana Dashboard
 """,
     version="1.1.0",
     contact={
@@ -27,6 +30,7 @@ Features:
     },
 )
 app.add_middleware(LoggingMiddleware)
+Instrumentator().instrument(app).expose(app)
 app.include_router(predict_router, tags=["Prediction"])
 
 

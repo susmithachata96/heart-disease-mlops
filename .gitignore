@@ -10,3 +10,4 @@ mlruns/
 .vscode/settings.json
 mlflow.db
 notebooks/mlflow.db
+*.tar
