@@ -12,3 +12,4 @@ joblib
 pytest
 requests
 python-dotenv
+prometheus-fastapi-instrumentator
