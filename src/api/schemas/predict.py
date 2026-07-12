@@ -20,3 +20,4 @@ class HeartDiseaseRequest(BaseModel):
 class PredictionResponse(BaseModel):
     prediction: int
     prediction_label: str
+    confidence: float

@@ -26,9 +26,14 @@ def predict(request: HeartDiseaseRequest):
     # Prediction
     prediction = model.predict(input_scaled)[0]
 
+    # Prediction Probability
+    probability = model.predict_proba(input_scaled)[0]
+    confidence = round(max(probability) * 100, 2)
+
     label = "Disease" if prediction == 1 else "No Disease"
 
     return PredictionResponse(
         prediction=int(prediction),
         prediction_label=label,
+        confidence=confidence,
     )
