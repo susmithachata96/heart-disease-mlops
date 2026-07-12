@@ -3,6 +3,9 @@ import time
 
 from fastapi import Request
 from starlette.middleware.base import BaseHTTPMiddleware
+import os
+
+os.makedirs("logs", exist_ok=True)
 
 
 logging.basicConfig(
